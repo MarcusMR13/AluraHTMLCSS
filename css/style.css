@@ -1,8 +1,57 @@
+/*fontes*/
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* Reset CSS */
+* {
+    margin: 0; /*tirando margem de todos elementos*/
+    padding: 0; /*tirando pedding de todos elementos*/
+}
+
+/* mantendo Body em 100% da altura do viewport e garantindo que não vai sair do limite*/
 body {
+    height: 100vh; /* 100vh = 100% do viewport height */
+    box-sizing: border-box; /* garantindo que não vai sair da borda do body*/
     background-color: black;
     color: #F6F6F6;
 }
-
-strong {
+.titulo-destaque {
     color: #22D4FD;
+}
+/*Flexbox: colocando os filhos em linha (o que ta dentro de uma tag obedece ela)*/
+.apresentacao {
+    margin: 10% 15%; /*aplicando margem somente nos elementos da "apresentacao""*/
+    display: flex; /* por padrão vem na hortizontal, se usar flex-direction consegue mudar*/
+    align-items: center; /* alinhando items no centro conforme o item maior*/
+    justify-content: space-between; /*separando seção da imagem*/
+}
+.apresentacao__conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 615px;
+}
+.apresentacao__conteudo__titulo {
+    font-family: "Krona One", serif;
+    font-weight: 400;
+    font-size: 36px;
+}
+.apresentacao__conteudo__texto {
+    font-family: "Montserrat", serif;
+    font-weight: 400;
+    font-size: 24px;
+}
+.apresentacao__botoes{
+    display: flex;
+    justify-content: space-between;
+}
+.apresentacao__botoes_link{
+    background-color: #22D4FD;
+    text-align: center; 
+    color: #000;
+    font-family: "Montserrat", serif;
+    font-size: 24px;
+    font-weight: 600;
+    border-radius: 16px; /*raio de arredondamento da borda*/
+    padding: 21.5px 0 ; /* padding X(21.5 vertical) Y ( 0 Horizontal)*/
+    text-decoration: none; /*tirando decoração de texto */ 
+    width: 280px;
 }
